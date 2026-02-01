@@ -1,7 +1,27 @@
 [
-  { "question": "What is Software Testing?", "answer": "Software testing is the process of evaluating a software application to ensure it meets the required results and is free of defects." },
-  { "question": "What is SDLC?", "answer": "SDLC stands for Software Development Life Cycle, a structured process for developing software efficiently." },
-  { "question": "What is STLC?", "answer": "STLC stands for Software Testing Life Cycle, which is the process of testing software from planning to closure." },
-  { "question": "What is a Test Case?", "answer": "A test case is a set of conditions under which a tester determines whether an application works correctly." },
-  { "question": "What is a Bug Life Cycle?", "answer": "The Bug Life Cycle is the process that a defect goes through from discovery to closure." }
+  {
+    "question": "What is Software Testing?",
+    "answer": "Software testing is the process of verifying and validating that a software application works as expected.",
+    "category": "Basics"
+  },
+  {
+    "question": "What is SDLC & STLC?",
+    "answer": "SDLC is Software Development Life Cycle and STLC is Software Testing Life Cycle.",
+    "category": "Basics"
+  },
+  {
+    "question": "What is a Test Case?",
+    "answer": "A test case is a set of conditions or steps used to verify that a feature works correctly.",
+    "category": "Test Design"
+  },
+  {
+    "question": "What is Bug Life Cycle?",
+    "answer": "The bug life cycle is the process a defect goes through from discovery to closure.",
+    "category": "Defects"
+  },
+  {
+    "question": "Types of Testing?",
+    "answer": "Smoke Testing: Quick test to check major functionality.\nRegression Testing: Test after changes to ensure no breakage.\nFunctional Testing: Test specific functions of software.",
+    "category": "Testing Types"
+  }
 ]
