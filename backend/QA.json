@@ -1,0 +1,7 @@
+[
+  { "question": "What is Software Testing?", "answer": "Software testing is the process of evaluating a software application to ensure it meets the required results and is free of defects." },
+  { "question": "What is SDLC?", "answer": "SDLC stands for Software Development Life Cycle, a structured process for developing software efficiently." },
+  { "question": "What is STLC?", "answer": "STLC stands for Software Testing Life Cycle, which is the process of testing software from planning to closure." },
+  { "question": "What is a Test Case?", "answer": "A test case is a set of conditions under which a tester determines whether an application works correctly." },
+  { "question": "What is a Bug Life Cycle?", "answer": "The Bug Life Cycle is the process that a defect goes through from discovery to closure." }
+]
