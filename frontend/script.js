@@ -22,7 +22,7 @@ function renderQA(list) {
 
     list.forEach((item, index) => {
         const card = document.createElement('div');
-        card.className = 'accordion-item mb-2';
+        card.className = 'accordion-item mb-3';
 
         card.innerHTML = `
       <h2 class="accordion-header" id="heading${index}">
@@ -33,6 +33,10 @@ function renderQA(list) {
       <div id="collapse${index}" class="accordion-collapse collapse" aria-labelledby="heading${index}" data-bs-parent="#qa-container">
         <div class="accordion-body">
           ${item.answer.replace(/\n/g, '<br>')}
+          ${item.video ? `
+            <div class="mt-3 video-container">
+              <iframe src="${item.video}" title="Video" frameborder="0" allowfullscreen></iframe>
+            </div>` : ''}
         </div>
       </div>
     `;
