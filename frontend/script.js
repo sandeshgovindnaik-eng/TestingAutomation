@@ -1,14 +1,26 @@
+let qaData = [];
+
 // Fetch QA data from backend
 fetch('/api/questions')
     .then(res => res.json())
-    .then(data => renderQA(data))
+    .then(data => {
+        qaData = data;
+        populateCategories();
+        renderQA(qaData);
+    })
     .catch(err => console.error('Error fetching QA:', err));
 
-function renderQA(qaList) {
+// Render Q&A cards
+function renderQA(list) {
     const container = document.getElementById('qa-container');
     container.innerHTML = '';
 
-    qaList.forEach((item, index) => {
+    if(list.length === 0) {
+        container.innerHTML = `<p class="text-center text-muted">No questions found.</p>`;
+        return;
+    }
+
+    list.forEach((item, index) => {
         const card = document.createElement('div');
         card.className = 'accordion-item mb-2';
 
@@ -27,4 +39,33 @@ function renderQA(qaList) {
 
         container.appendChild(card);
     });
+}
+
+// Populate categories in filter dropdown
+function populateCategories() {
+    const select = document.getElementById('categoryFilter');
+    const categories = [...new Set(qaData.map(q => q.category))];
+    categories.forEach(cat => {
+        const option = document.createElement('option');
+        option.value = cat;
+        option.textContent = cat;
+        select.appendChild(option);
+    });
+}
+
+// Search and filter
+document.getElementById('searchBox').addEventListener('input', filterQA);
+document.getElementById('categoryFilter').addEventListener('change', filterQA);
+
+function filterQA() {
+    const searchTerm = document.getElementById('searchBox').value.toLowerCase();
+    const category = document.getElementById('categoryFilter').value;
+
+    const filtered = qaData.filter(q => {
+        const matchCategory = category ? q.category === category : true;
+        const matchSearch = q.question.toLowerCase().includes(searchTerm) || q.answer.toLowerCase().includes(searchTerm);
+        return matchCategory && matchSearch;
+    });
+
+    renderQA(filtered);
 }
