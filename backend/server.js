@@ -9,7 +9,7 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, '../frontend')));
 
 // Endpoint to get content data
-app.get('/api/questions', (req, res) => {
+app.get('/api/content', (req, res) => {
     const contentData = require('./content.json');
     res.json(contentData);
 });
