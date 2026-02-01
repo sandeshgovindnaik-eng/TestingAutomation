@@ -1,17 +1,13 @@
 {
   "name": "automation_testing",
   "version": "1.0.0",
-  "description": "Collapsible Q&A teaching website",
   "main": "backend/server.js",
   "type": "commonjs",
-  "scripts": {
-    "start": "node backend/server.js"
-  },
-  "engines": {
-    "node": ">=18"
-  },
   "dependencies": {
     "express": "^5.2.1",
-    "body-parser": "^1.20.2"
+    "cors": "^2.8.5"
+  },
+  "scripts": {
+    "start": "node backend/server.js"
   }
 }

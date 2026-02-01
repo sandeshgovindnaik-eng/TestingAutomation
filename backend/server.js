@@ -1,20 +1,19 @@
 const express = require('express');
+const cors = require('cors');
 const path = require('path');
 const app = express();
-const port = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3000;
 
+app.use(cors());
+app.use(express.json());
 app.use(express.static(path.join(__dirname, '../frontend')));
 
-app.get('/api/content', (req, res) => {
-    res.sendFile(path.join(__dirname, 'content.json'));
+// Endpoint to get content data
+app.get('/api/questions', (req, res) => {
+    const contentData = require('./content.json');
+    res.json(contentData);
 });
 
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '../frontend/index.html'));
+app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
 });
-
-app.get('/details.html', (req, res) => {
-    res.sendFile(path.join(__dirname, '../frontend/details.html'));
-});
-
-app.listen(port, () => console.log(`Server running at http://localhost:${port}`));

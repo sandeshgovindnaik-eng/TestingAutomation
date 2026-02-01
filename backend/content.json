@@ -1,14 +1,32 @@
 [
   {
-    "question": "Introduction to Automation Testing",
-    "answer": "This video explains the basics of automation testing.",
-    "category": "Basics",
+    "id": 1,
+    "section": "Learning",
+    "title": "What is Software Testing?",
+    "description": "Software testing is the process of verifying and validating that a software application works as expected.",
+    "image": "assets/images/testing.jpg",
     "video": "https://www.youtube.com/embed/xHF69A2wUd0"
   },
   {
-    "question": "What is Software Testing?",
-    "answer": "Software testing is the process of verifying and validating that a software application works as expected.",
-    "category": "Basics"
+    "id": 2,
+    "section": "Definition",
+    "title": "SDLC & STLC",
+    "description": "SDLC is Software Development Life Cycle and STLC is Software Testing Life Cycle.",
+    "image": "assets/images/sdlc.jpg"
+  },
+  {
+    "id": 3,
+    "section": "Videos",
+    "title": "Automated Testing Tutorial",
+    "description": "Watch this tutorial for learning automation testing with examples.",
+    "image": "assets/images/video.jpg",
+    "video": "https://www.youtube.com/embed/xHF69A2wUd0"
+  },
+  {
+    "id": 4,
+    "section": "Practice",
+    "title": "Test Case Example",
+    "description": "Try writing a test case for login functionality.",
+    "image": "assets/images/practice.jpg"
   }
 ]
-
