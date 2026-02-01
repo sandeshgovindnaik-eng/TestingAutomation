@@ -1,84 +1,72 @@
-let qaData = [];
+let contentData = [];
 
-// Fetch QA data from backend
-fetch('/api/questions')
+fetch('/api/content')
     .then(res => res.json())
     .then(data => {
-        qaData = data;
-        populateCategories();
-        renderQA(qaData);
-    })
-    .catch(err => console.error('Error fetching QA:', err));
-
-// Render Q&A cards
-function renderQA(list) {
-    const container = document.getElementById('qa-container');
-    container.innerHTML = '';
-
-    if(list.length === 0) {
-        container.innerHTML = `<p class="text-center text-muted">No questions found.</p>`;
-        return;
-    }
-
-    list.forEach((item, index) => {
-        const card = document.createElement('div');
-        card.className = 'accordion-item mb-2';
-
-        // Video HTML (if exists)
-        const videoHTML = item.video ? `
-          <div class="video-container mt-3">
-            <iframe 
-                src="${item.video}?rel=0&modestbranding=1" 
-                title="Video" 
-                frameborder="0" 
-                allowfullscreen>
-            </iframe>
-          </div>
-        ` : '';
-
-        card.innerHTML = `
-          <h2 class="accordion-header" id="heading${index}">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse${index}" aria-expanded="false" aria-controls="collapse${index}">
-              ${item.question} <span class="badge badge-category">${item.category}</span>
-            </button>
-          </h2>
-          <div id="collapse${index}" class="accordion-collapse collapse" aria-labelledby="heading${index}" data-bs-parent="#qa-container">
-            <div class="accordion-body">
-              ${item.answer.replace(/\n/g, '<br>')}
-              ${videoHTML}
-            </div>
-          </div>
-        `;
-
-        container.appendChild(card);
+        contentData = data;
+        populateSections();
+        renderSections(contentData);
     });
-}
 
-// Populate categories in filter dropdown
-function populateCategories() {
+function populateSections() {
     const select = document.getElementById('categoryFilter');
-    const categories = [...new Set(qaData.map(q => q.category))];
-    categories.forEach(cat => {
+    const sections = [...new Set(contentData.map(c => c.section))];
+    sections.forEach(sec => {
         const option = document.createElement('option');
-        option.value = cat;
-        option.textContent = cat;
+        option.value = sec;
+        option.textContent = sec;
         select.appendChild(option);
     });
 }
 
-// Search and filter
-document.getElementById('searchBox').addEventListener('input', filterQA);
-document.getElementById('categoryFilter').addEventListener('change', filterQA);
+function renderSections(list) {
+    const container = document.getElementById('sections-container');
+    container.innerHTML = '';
 
-function filterQA() {
+    const sections = [...new Set(list.map(c => c.section))];
+
+    sections.forEach(section => {
+        const cards = list.filter(c => c.section === section);
+
+        const sectionHTML = document.createElement('div');
+        sectionHTML.className = 'mb-5';
+        sectionHTML.innerHTML = `<h3 class="mb-3">${section}</h3><div class="row" id="row-${section}"></div>`;
+        container.appendChild(sectionHTML);
+
+        const row = document.getElementById(`row-${section}`);
+
+        cards.forEach(item => {
+            const card = document.createElement('div');
+            card.className = 'col-md-4 mb-4';
+            card.setAttribute('data-aos', 'fade-up');
+            card.innerHTML = `
+                <div class="card h-100 shadow-sm">
+                    <img src="${item.image}" class="card-img-top" alt="${item.title}">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">${item.title}</h5>
+                        <p class="card-text text-truncate">${item.description}</p>
+                        <a href="details.html?id=${item.id}" class="mt-auto btn btn-primary">Read More</a>
+                    </div>
+                </div>
+            `;
+            row.appendChild(card);
+            gsap.from(card, {opacity:0, y:50, duration:0.5, delay: Math.random()*0.5});
+        });
+    });
+}
+
+document.getElementById('searchBox').addEventListener('input', filterContent);
+document.getElementById('categoryFilter').addEventListener('change', filterContent);
+
+function filterContent() {
     const searchTerm = document.getElementById('searchBox').value.toLowerCase();
-    const category = document.getElementById('categoryFilter').value;
+    const section = document.getElementById('categoryFilter').value;
 
-    const filtered = qaData.filter(q => {
-        const matchCategory = category ? q.category === category : true;
-        const matchSearch = q.question.toLowerCase().includes(searchTerm) || q.answer.toLowerCase().includes(searchTerm);
-        return matchCategory && matchSearch;
+    const filtered = contentData.filter(c => {
+        const matchSection = section ? c.section === section : true;
+        const matchSearch = c.title.toLowerCase().includes(searchTerm) || c.description.toLowerCase().includes(searchTerm);
+        return matchSection && matchSearch;
     });
 
-    renderQA(filtered);
+    renderSections(filtered);
 }
