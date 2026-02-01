@@ -1,8 +1,14 @@
 [
   {
+    "question": "Introduction to Automation Testing",
+    "answer": "This video explains the basics of automation testing.",
+    "category": "Basics",
+    "video": "https://www.youtube.com/embed/xHF69A2wUd0"
+  },
+  {
     "question": "What is Software Testing?",
     "answer": "Software testing is the process of verifying and validating that a software application works as expected.",
-    "category": "Basics",
-    "video": "https://www.youtube.com/watch?v=zpsVpnvFfZQ&list=RDzpsVpnvFfZQ&start_radio=1"
+    "category": "Basics"
   }
 ]
+

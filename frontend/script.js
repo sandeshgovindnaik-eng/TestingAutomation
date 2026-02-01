@@ -22,24 +22,33 @@ function renderQA(list) {
 
     list.forEach((item, index) => {
         const card = document.createElement('div');
-        card.className = 'accordion-item mb-3';
+        card.className = 'accordion-item mb-2';
+
+        // Video HTML (if exists)
+        const videoHTML = item.video ? `
+          <div class="video-container mt-3">
+            <iframe 
+                src="${item.video}?rel=0&modestbranding=1" 
+                title="Video" 
+                frameborder="0" 
+                allowfullscreen>
+            </iframe>
+          </div>
+        ` : '';
 
         card.innerHTML = `
-      <h2 class="accordion-header" id="heading${index}">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse${index}" aria-expanded="false" aria-controls="collapse${index}">
-          ${item.question} <span class="badge badge-category">${item.category}</span>
-        </button>
-      </h2>
-      <div id="collapse${index}" class="accordion-collapse collapse" aria-labelledby="heading${index}" data-bs-parent="#qa-container">
-        <div class="accordion-body">
-          ${item.answer.replace(/\n/g, '<br>')}
-          ${item.video ? `
-            <div class="mt-3 video-container">
-              <iframe src="${item.video}" title="Video" frameborder="0" allowfullscreen></iframe>
-            </div>` : ''}
-        </div>
-      </div>
-    `;
+          <h2 class="accordion-header" id="heading${index}">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse${index}" aria-expanded="false" aria-controls="collapse${index}">
+              ${item.question} <span class="badge badge-category">${item.category}</span>
+            </button>
+          </h2>
+          <div id="collapse${index}" class="accordion-collapse collapse" aria-labelledby="heading${index}" data-bs-parent="#qa-container">
+            <div class="accordion-body">
+              ${item.answer.replace(/\n/g, '<br>')}
+              ${videoHTML}
+            </div>
+          </div>
+        `;
 
         container.appendChild(card);
     });
