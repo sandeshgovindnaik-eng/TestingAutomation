@@ -1,0 +1,260 @@
+{
+  "sections": [
+    {
+      "id": "introduction",
+      "title": "Introduction",
+      "description": "Foundations of Automation Testing and DevOps",
+      "image": "/images/introduction.jpg",
+      "modules": [
+        {
+          "title": "What is Automation Testing?",
+          "content": "Automation testing is the process of using tools and scripts to perform testing automatically, reducing manual effort."
+        },
+        {
+          "title": "Why DevOps Matters",
+          "content": "DevOps is important because it integrates development and operations, enabling faster and more reliable delivery of software."
+        },
+        {
+          "title": "Why DevOps Matters1",
+          "content": "DevOps is important because it integrates development and operations, enabling faster and more reliable delivery of software."
+        },
+        {
+          "title": "Why DevOps Matters2",
+          "content": "DevOps is important because it integrates development and operations, enabling faster and more reliable delivery of software."
+        },
+        {
+          "title": "SDLC & STLC Overview",
+          "content": "Software Development Life Cycle (SDLC) and Software Testing Life Cycle (STLC) provide structured approaches to develop and test software."
+        },
+        {
+          "title": "CI/CD Basics",
+          "content": "Continuous Integration and Continuous Deployment (CI/CD) are practices that automate building, testing, and deploying code."
+        }
+      ]
+    },
+    {
+      "id": "learning",
+      "title": "Learning Path",
+      "description": "Step-by-step roadmap to become Automation & DevOps Engineer",
+      "image": "/images/Learning.jpg",
+      "modules": [
+        {
+          "title": "Java & Python Basics",
+          "content": "Learn the basics of Java and Python programming to start your automation journey."
+        },
+        {
+          "title": "Selenium & Playwright",
+          "content": "Hands-on tutorials for Selenium and Playwright test automation tools."
+        },
+        {
+          "title": "TestNG & PyTest",
+          "content": "Understand how to structure tests using TestNG and PyTest frameworks."
+        },
+        {
+          "title": "Git & GitHub",
+          "content": "Version control with Git and collaborating with GitHub repositories."
+        },
+        {
+          "title": "Docker Fundamentals",
+          "content": "Introduction to Docker containers for consistent development environments."
+        },
+        {
+          "title": "Jenkins Pipelines",
+          "content": "Create CI/CD pipelines using Jenkins to automate your deployments."
+        }
+      ]
+    },
+    {
+      "id": "videos",
+      "title": "Video Lectures",
+      "description": "Recorded expert sessions and tutorials",
+      "image": "/images/Videos.jpg",
+      "modules": [
+        {
+          "title": "Selenium Framework Design",
+          "content": "Learn how to design a robust Selenium automation framework with best practices."
+        },
+        {
+          "title": "Playwright Advanced Concepts",
+          "content": "Deep dive into Playwright features, cross-browser testing, and parallel execution."
+        },
+        {
+          "title": "CI/CD Pipeline Walkthrough",
+          "content": "Step-by-step video guide to setting up CI/CD pipelines with automation integration."
+        },
+        {
+          "title": "Docker for Test Automation",
+          "content": "Learn how to use Docker to containerize and run test suites efficiently."
+        }
+      ]
+    },
+    {
+      "id": "labs",
+      "title": "Hands-on Labs",
+      "description": "Real-world automation & DevOps practice",
+      "image": "/images/labs.jpg",
+      "modules": [
+        {
+          "title": "Build Selenium Framework",
+          "content": "Hands-on lab to create a Selenium automation framework from scratch."
+        },
+        {
+          "title": "Playwright Automation Project",
+          "content": "Practical project to automate a web application using Playwright."
+        },
+        {
+          "title": "Dockerize Test Suites",
+          "content": "Lab to package automation tests in Docker containers for consistent execution."
+        },
+        {
+          "title": "Jenkins CI Pipeline Setup",
+          "content": "Setup Jenkins pipelines to automate test execution and deployment."
+        }
+      ]
+    },
+    {
+      "id": "cloud",
+      "title": "Cloud & Containerization",
+      "description": "Leveraging cloud environments for automation",
+      "image": "/images/cloud.jpg",
+      "modules": [
+        {
+          "title": "AWS Basics for Test Engineers",
+          "content": "Introduction to AWS services and their usage for automation projects."
+        },
+        {
+          "title": "Azure DevOps Fundamentals",
+          "content": "Learn how to use Azure DevOps for CI/CD and project management."
+        },
+        {
+          "title": "Kubernetes for Test Deployment",
+          "content": "Understand Kubernetes basics and deploying test environments at scale."
+        },
+        {
+          "title": "Docker Swarm & Container Orchestration",
+          "content": "Advanced container orchestration using Docker Swarm for distributed testing."
+        }
+      ]
+    },
+    {
+      "id": "frameworks",
+      "title": "Test Automation Frameworks",
+      "description": "Deep dive into building robust frameworks",
+      "image": "/images/frameworks.jpg",
+      "modules": [
+        {
+          "title": "Data-Driven & Keyword-Driven Frameworks",
+          "content": "Learn different automation framework strategies for reusable test design."
+        },
+        {
+          "title": "BDD with Cucumber & Behave",
+          "content": "Implement behavior-driven development using Cucumber and Behave."
+        },
+        {
+          "title": "Hybrid Framework Design",
+          "content": "Combine multiple framework types for flexibility and scalability."
+        },
+        {
+          "title": "Reporting & Logging Best Practices",
+          "content": "Implement effective reporting and logging for automation results."
+        }
+      ]
+    },
+    {
+      "id": "performance",
+      "title": "Performance & Security Testing",
+      "description": "Extend automation to performance and security domains",
+      "image": "/images/performance.jpeg",
+      "modules": [
+        {
+          "title": "JMeter Load Testing",
+          "content": "Simulate load and stress tests using JMeter to ensure performance."
+        },
+        {
+          "title": "Locust for Performance Testing",
+          "content": "Use Locust for distributed performance testing with Python scripts."
+        },
+        {
+          "title": "OWASP Security Basics",
+          "content": "Understand common security vulnerabilities and their mitigation."
+        },
+        {
+          "title": "Automating Security Test Cases",
+          "content": "Integrate security testing into automated test suites."
+        }
+      ]
+    },
+    {
+      "id": "cicd-advanced",
+      "title": "CI/CD Advanced Practices",
+      "description": "Mastering continuous integration and deployment pipelines",
+      "image": "/images/ci-cd.png",
+      "modules": [
+        {
+          "title": "Jenkins Advanced Pipelines",
+          "content": "Build complex Jenkins pipelines with parallel stages and triggers."
+        },
+        {
+          "title": "GitLab CI/CD Pipelines",
+          "content": "Implement GitLab pipelines for automated builds and testing."
+        },
+        {
+          "title": "Blue-Green & Canary Deployments",
+          "content": "Learn deployment strategies for zero-downtime releases."
+        },
+        {
+          "title": "Automating Test Execution in Pipelines",
+          "content": "Run automated tests as part of CI/CD pipelines with proper reporting."
+        }
+      ]
+    },
+    {
+      "id": "soft-skills",
+      "title": "Professional & Soft Skills",
+      "description": "Essential skills for career growth in Automation & DevOps",
+      "image": "/images/soft-skill.jpeg",
+      "modules": [
+        {
+          "title": "Agile & Scrum Basics",
+          "content": "Understand Agile methodology and Scrum framework for effective teamwork."
+        },
+        {
+          "title": "Effective Communication for Engineers",
+          "content": "Learn how to communicate technical concepts clearly and collaborate efficiently."
+        },
+        {
+          "title": "Collaboration in DevOps Teams",
+          "content": "Best practices for working effectively within cross-functional DevOps teams."
+        },
+        {
+          "title": "Time Management & Productivity Tips",
+          "content": "Techniques like prioritization, Pomodoro, time blocking, and automation to improve productivity and manage workload effectively."
+        }
+      ]
+    },
+    {
+      "id": "ai-automation",
+      "title": "AI & ML in Test Automation",
+      "description": "Leveraging artificial intelligence and machine learning for smarter automation",
+      "image": "/images/ai-automation.jpg",
+      "modules": [
+        {
+          "title": "AI-Powered Test Case Generation",
+          "content": "Use AI tools to automatically generate test cases based on application behavior."
+        },
+        {
+          "title": "Visual Testing with AI Tools",
+          "content": "Leverage AI to detect visual UI changes and anomalies automatically."
+        },
+        {
+          "title": "Predictive Test Analytics",
+          "content": "Analyze test data with machine learning to predict failures and optimize testing."
+        },
+        {
+          "title": "Integrating AI into CI/CD Pipelines",
+          "content": "Implement AI-driven testing within CI/CD pipelines for faster feedback."
+        }
+      ]
+    }
+  ]
+}
