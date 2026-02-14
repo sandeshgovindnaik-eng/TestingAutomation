@@ -46,7 +46,7 @@
             "And the Object (Integer Array of size 10) we have created, will be available in the Heap area because that space will be allocated to the program during runtime." ]
         },
         {
-          "title": "Can java be said to be the complete object-oriented programming language?",
+          "title": "4. Can java be said to be the complete object-oriented programming language?",
           "content":[
             "It is not wrong to claim that Java is a complete object-oriented programming language because most things in Java are defined under classes and can be accessed by creating objects.",
             "However, Java is not considered a completely object-oriented programming language because it supports primitive data types like int, float, char, boolean, and double.",
@@ -54,8 +54,12 @@
           ]
         },
         {
-          "title": "SDLC & STLC Overview",
-          "content": "Software Development Life Cycle (SDLC) and Software Testing Life Cycle (STLC) provide structured approaches to develop and test software."
+          "title": "5. Pointers are used in C/ C++. Why does Java not make use of pointers?",
+          "content": [
+            "Pointers are special variables in C/C++ that store the memory address of another variable.",
+            "Java does not use pointers because they are confusing and can cause errors like crashing the program or security problems.",
+            "Instead of pointers, Java uses references for objects, which safely point to the object in memory without letting the programmer directly change memory addresses."
+          ]
         },
         {
           "title": "CI/CD Basics",
