@@ -22,7 +22,7 @@ export default async function SectionPage({ params }: PageProps) {
                         sectionId={sectionData.id}
                         moduleId={module.title}
                         title={module.title}
-                        image={module.image} // your module image
+                        description={module.content} // optional, for short preview
                     />
                 ))}
             </div>
