@@ -71,7 +71,8 @@
       "modules": [
         {
           "title": "Java Coding",
-          "content": "Coding Questions for Interview."
+          "content": "Coding Questions for Interview.",
+          "image": "/images/coding.jpg"
         },
         {
           "title": "Selenium & Playwright",
