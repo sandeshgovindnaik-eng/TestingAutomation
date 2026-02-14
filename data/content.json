@@ -30,8 +30,14 @@
           ]
         },
         {
-          "title": "Why DevOps Matters1",
-          "content": ["Java supports primitive data types - byte, boolean, char, short, int, float, long, and double and hence it is not a pure object oriented language."]
+          "title": "Difference between Heap and Stack Memory in java. And how java utilizes this.",
+          "content": [
+            "Stack memory in Java is used to store local variables and function calls. It is fast and organized in a last-in, first-out (LIFO) way.",
+            "Heap memory in Java is used to store objects and non-primitive data like arrays and strings. It is bigger than stack memory and can grow dynamically.",
+            "In stack memory, variables store actual values for primitives and references (memory addresses) for objects. In heap memory, the actual objects and their data are stored.",
+            "Java uses stack memory for method execution and temporary variables, while it uses heap memory to store objects that can be accessed from anywhere in the program.",
+            "Stack and heap are connected through references. For example, a variable on the stack can point to an object in the heap, allowing the program to access and use that object."
+          ]
         },
         {
           "title": "Why DevOps Matters2",
