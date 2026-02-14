@@ -64,15 +64,14 @@
       ]
     },
     {
-      "id": "learning",
-      "title": "Learning Path",
+      "id": "Java Coding",
+      "title": "Coding Questions for Interview.",
       "description": "Step-by-step roadmap to become Automation & DevOps Engineer",
-      "image": "/images/Learning.jpg",
+      "image": "/images/coding.jpg",
       "modules": [
         {
           "title": "Java Coding",
-          "content": "Coding Questions for Interview.",
-          "image": "/images/coding.jpg"
+          "content": "Coding Questions for Interview."
         },
         {
           "title": "Selenium & Playwright",
