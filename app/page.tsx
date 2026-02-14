@@ -5,7 +5,7 @@ export default function Page() {
     return (
         <main className="min-h-screen bg-slate-950 text-white px-6 py-12">
             {/* Page Title */}
-            <h1 className="text-4xl md:text-5xl font-extrabold text-cyan-400 text-center mb-12">
+            <h1 className="text-4xl md:text-5xl font-extrabold text-cyan-400  mb-12">
                 Automation Testing & DevOps Academy
             </h1>
 
@@ -24,7 +24,7 @@ export default function Page() {
 
             {/* About Author Section */}
             <section className="bg-slate-900 rounded-lg p-8 max-w-4xl mx-auto mt-16 shadow-lg">
-                <h2 className="text-3xl font-bold text-cyan-400 mb-6 text-center">
+                <h2 className="text-3xl font-bold text-cyan-400 mb-6">
                     About the Author
                 </h2>
 
@@ -37,7 +37,7 @@ export default function Page() {
                     />
 
                     {/* Author Details */}
-                    <div className="text-center md:text-left">
+                    <div className="md:text-left">
                         <h3 className="text-2xl font-semibold mb-2">Sandesh Govind Naik</h3>
                         <p className="text-gray-300 mb-2">
                             Automation & DevOps Engineer | Passionate about testing, CI/CD pipelines, and building quality software.
