@@ -64,35 +64,512 @@
       ]
     },
     {
-      "id": "learning",
-      "title": "Learning Path",
-      "description": "Step-by-step roadmap to become Automation & DevOps Engineer",
+      "id": "Java-Coding",
+      "title": "Java-Coding",
+      "description": "Coding Questions for Interview.",
+      "image": "/images/coding.jpg",
       "modules": [
         {
-          "title": "Java Coding",
-          "content": "Coding Questions for Interview.",
-          "image": "/images/coding.jpg"
+          "title": "1. Get the Length of the String",
+          "content": [
+            "public class StringLength {",
+            "    public static int getLength(String str) {",
+            "        if (str == null) {",
+            "            throw new IllegalArgumentException(\"Input string cannot be null\");",
+            "        }",
+            "        return str.length();",
+            "    }",
+            "    public static void main(String[] args) {",
+            "        String str = \"Coding Questions for Interview.\";",
+            "        System.out.println(\"Length: \" + getLength(str));",
+            "    }",
+            "}"
+          ]
         },
         {
-          "title": "Selenium & Playwright",
-          "content": "Hands-on tutorials for Selenium and Playwright test automation tools."
+          "title": "2. Validate IPV4 Address",
+          "content": [
+            "public class ValidateIP {",
+            "    public static boolean isValidIP(String ip) {",
+            "        if (ip == null || ip.isEmpty()) return false;",
+            "        String[] parts = ip.split(\"\\\\.\");",
+            "        if (parts.length != 4) return false;",
+            "        for (String part : parts) {",
+            "            try {",
+            "                int num = Integer.parseInt(part);",
+            "                if (num < 0 || num > 255) return false;",
+            "                if (part.length() > 1 && part.startsWith(\"0\")) return false;",
+            "            } catch (NumberFormatException e) {",
+            "                return false;",
+            "            }",
+            "        }",
+            "        return true;",
+            "    }",
+            "    public static void main(String[] args) {",
+            "        System.out.println(isValidIP(\"192.168.1.1\"));",
+            "    }",
+            "}"
+          ]
         },
         {
-          "title": "TestNG & PyTest",
-          "content": "Understand how to structure tests using TestNG and PyTest frameworks."
+          "title": "3. Reverse String",
+          "content": [
+            "public class ReverseString {",
+            "    public static String reverse(String str) {",
+            "        if (str == null) return null;",
+            "        return new StringBuilder(str).reverse().toString();",
+            "    }",
+            "    public static void main(String[] args) {",
+            "        System.out.println(reverse(\"Hello\"));",
+            "    }",
+            "}"
+          ]
         },
         {
-          "title": "Git & GitHub",
-          "content": "Version control with Git and collaborating with GitHub repositories."
+          "title": "4. Reverse Words in String",
+          "content": [
+            "public class ReverseWords {",
+            "    public static String reverseWords(String str) {",
+            "        if (str == null || str.trim().isEmpty()) return str;",
+            "        String[] words = str.trim().split(\"\\\\s+\");",
+            "        StringBuilder sb = new StringBuilder();",
+            "        for (int i = words.length - 1; i >= 0; i--) {",
+            "            sb.append(words[i]).append(\" \");",
+            "        }",
+            "        return sb.toString().trim();",
+            "    }",
+            "    public static void main(String[] args) {",
+            "        System.out.println(reverseWords(\"Sandesh Anitha\"));",
+            "    }",
+            "}"
+          ]
         },
         {
-          "title": "Docker Fundamentals",
-          "content": "Introduction to Docker containers for consistent development environments."
+          "title": "5. Count Character Occurrences",
+          "content": [
+            "import java.util.*;",
+            "public class CharCount {",
+            "    public static Map<Character,Integer> countChars(String str){",
+            "        Map<Character,Integer> map=new HashMap<>();",
+            "        if(str==null) return map;",
+            "        for(char c:str.toLowerCase().toCharArray()){",
+            "            map.put(c,map.getOrDefault(c,0)+1);",
+            "        }",
+            "        return map;",
+            "    }",
+            "    public static void main(String[] args){",
+            "        System.out.println(countChars(\"SanSandedesssh\"));",
+            "    }",
+            "}"
+          ]
         },
+
         {
-          "title": "Jenkins Pipelines",
-          "content": "Create CI/CD pipelines using Jenkins to automate your deployments."
+          "title": "6. Merge 3 Arrays and Sort",
+          "content": [
+            "import java.util.*;",
+            "public class MergeSortArrays {",
+            "    public static List<Integer> mergeAndSort(int[]... arrays){",
+            "        List<Integer> list=new ArrayList<>();",
+            "        for(int[] arr:arrays){",
+            "            for(int num:arr) list.add(num);",
+            "        }",
+            "        Collections.sort(list);",
+            "        return list;",
+            "    }",
+            "    public static void main(String[] args){",
+            "        int[] a={1,4,7},b={2,5,8},c={3,6,9};",
+            "        System.out.println(mergeAndSort(a,b,c));",
+            "    }",
+            "}"
+          ]
+        },
+
+        {
+          "title": "7. Count Word Occurrences",
+          "content": [
+            "import java.util.*;",
+            "public class WordCount {",
+            "    public static Map<String,Integer> countWords(String str){",
+            "        Map<String,Integer> map=new HashMap<>();",
+            "        if(str==null) return map;",
+            "        for(String word:str.toLowerCase().split(\"\\\\s+\")){",
+            "            map.put(word,map.getOrDefault(word,0)+1);",
+            "        }",
+            "        return map;",
+            "    }",
+            "    public static void main(String[] args){",
+            "        System.out.println(countWords(\"San san Desh\"));",
+            "    }",
+            "}"
+          ]
+        },
+
+        {
+          "title": "8. Palindrome Number",
+          "content": [
+            "public class PalindromeNumber {",
+            "    public static boolean isPalindrome(int num){",
+            "        int original=num,rev=0;",
+            "        while(num>0){",
+            "            rev=rev*10+num%10;",
+            "            num/=10;",
+            "        }",
+            "        return original==rev;",
+            "    }",
+            "    public static void main(String[] args){",
+            "        System.out.println(isPalindrome(121));",
+            "    }",
+            "}"
+          ]
+        },
+
+        {
+          "title": "9. Convert List to Set",
+          "content": [
+            "import java.util.*;",
+            "public class ListToSet {",
+            "    public static <T> Set<T> convert(List<T> list){",
+            "        return new HashSet<>(list);",
+            "    }",
+            "    public static void main(String[] args){",
+            "        List<Integer> list=Arrays.asList(1,2,2,3);",
+            "        System.out.println(convert(list));",
+            "    }",
+            "}"
+          ]
+        },
+
+        {
+          "title": "10. Swap Two Numbers",
+          "content": [
+            "public class SwapNumbers {",
+            "    public static void swap(){",
+            "        int a=10,b=20;",
+            "        a=a+b;",
+            "        b=a-b;",
+            "        a=a-b;",
+            "        System.out.println(\"a=\"+a+\" b=\"+b);",
+            "    }",
+            "    public static void main(String[] args){ swap(); }",
+            "}"
+          ]
+        },
+
+        {
+          "title": "11. Check Anagram",
+          "content": [
+            "import java.util.*;",
+            "public class Anagram {",
+            "    public static boolean isAnagram(String s1,String s2){",
+            "        if(s1==null||s2==null) return false;",
+            "        char[] a1=s1.replaceAll(\"\\\\s\",\"\").toLowerCase().toCharArray();",
+            "        char[] a2=s2.replaceAll(\"\\\\s\",\"\").toLowerCase().toCharArray();",
+            "        Arrays.sort(a1);",
+            "        Arrays.sort(a2);",
+            "        return Arrays.equals(a1,a2);",
+            "    }",
+            "    public static void main(String[] args){",
+            "        System.out.println(isAnagram(\"listen\",\"silent\"));",
+            "    }",
+            "}"
+          ]
+        },
+
+        {
+          "title": "12. Selenium Waits",
+          "content": [
+            "import org.openqa.selenium.*;",
+            "import org.openqa.selenium.chrome.*;",
+            "import org.openqa.selenium.support.ui.*;",
+            "import java.time.Duration;",
+            "public class WaitExample {",
+            "    public static void main(String[] args){",
+            "        WebDriver driver=new ChromeDriver();",
+            "        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));",
+            "        WebDriverWait wait=new WebDriverWait(driver,Duration.ofSeconds(15));",
+            "        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id(\"username\")));",
+            "        driver.quit();",
+            "    }",
+            "}"
+          ]
+        },
+
+        {
+          "title": "13. Desired Capabilities",
+          "content": [
+            "import org.openqa.selenium.*;",
+            "import org.openqa.selenium.chrome.*;",
+            "public class HomePage {",
+            "    public static void main(String[] args){",
+            "        ChromeOptions options=new ChromeOptions();",
+            "        options.addArguments(\"--start-maximized\");",
+            "        WebDriver driver=new ChromeDriver(options);",
+            "        driver.get(\"https://example.com\");",
+            "        driver.quit();",
+            "    }",
+            "}"
+          ]
+        },
+
+        {
+          "title": "14. Scrolling in Selenium",
+          "content": [
+            "import org.openqa.selenium.*;",
+            "import org.openqa.selenium.chrome.*;",
+            "public class ScrollExample {",
+            "    public static void main(String[] args){",
+            "        WebDriver driver=new ChromeDriver();",
+            "        JavascriptExecutor js=(JavascriptExecutor)driver;",
+            "        js.executeScript(\"window.scrollBy(0,500)\");",
+            "        driver.quit();",
+            "    }",
+            "}"
+          ]
+        },
+
+        {
+          "title": "15. Factorial, Fibonacci, Prime",
+          "content": [
+            "public class MathPrograms {",
+            "    public static long factorial(int n){",
+            "        long fact=1;",
+            "        for(int i=1;i<=n;i++) fact*=i;",
+            "        return fact;",
+            "    }",
+            "    public static boolean isPrime(int n){",
+            "        if(n<=1) return false;",
+            "        for(int i=2;i<=Math.sqrt(n);i++)",
+            "            if(n%i==0) return false;",
+            "        return true;",
+            "    }",
+            "    public static void fibonacci(int n){",
+            "        int a=0,b=1;",
+            "        for(int i=0;i<n;i++){",
+            "            System.out.print(a+\" \");",
+            "            int temp=a+b; a=b; b=temp;",
+            "        }",
+            "    }",
+            "    public static void main(String[] args){",
+            "        System.out.println(factorial(5));",
+            "        fibonacci(10);",
+            "        System.out.println(isPrime(7));",
+            "    }",
+            "}"
+          ]
+        },
+
+        {
+          "title": "16. Largest Number in Array",
+          "content": [
+            "public class LargestNumber {",
+            "    public static int findLargest(int[] arr){",
+            "        int max=arr[0];",
+            "        for(int n:arr) if(n>max) max=n;",
+            "        return max;",
+            "    }",
+            "    public static void main(String[] args){",
+            "        int[] arr={10,20,5,40};",
+            "        System.out.println(findLargest(arr));",
+            "    }",
+            "}"
+          ]
+        },
+
+        {
+          "title": "17. Sum of Array",
+          "content": [
+            "public class ArraySum {",
+            "    public static int sum(int[] arr){",
+            "        int total=0;",
+            "        for(int n:arr) total+=n;",
+            "        return total;",
+            "    }",
+            "    public static void main(String[] args){",
+            "        int[] arr={1,2,3,4};",
+            "        System.out.println(sum(arr));",
+            "    }",
+            "}"
+          ]
+        },
+
+        {
+          "title": "18. Armstrong Numbers",
+          "content": [
+            "public class Armstrong {",
+            "    public static boolean isArmstrong(int num){",
+            "        int sum=0,temp=num;",
+            "        while(temp>0){",
+            "            int rem=temp%10;",
+            "            sum+=rem*rem*rem;",
+            "            temp/=10;",
+            "        }",
+            "        return sum==num;",
+            "    }",
+            "    public static void main(String[] args){",
+            "        for(int i=1;i<=1000;i++)",
+            "            if(isArmstrong(i)) System.out.println(i);",
+            "    }",
+            "}"
+          ]
+        },
+
+        {
+          "title": "19. Find Duplicates",
+          "content": [
+            "import java.util.*;",
+            "public class DuplicateArray {",
+            "    public static void main(String[] args){",
+            "        int[] arr={1,2,3,2,4,1};",
+            "        Set<Integer> seen=new HashSet<>();",
+            "        for(int n:arr){",
+            "            if(!seen.add(n))",
+            "                System.out.println(\"Duplicate: \"+n);",
+            "        }",
+            "    }",
+            "}"
+          ]
+        },
+
+        {
+          "title": "20. Count Vowels and Consonants",
+          "content": [
+            "public class VowelConsonant {",
+            "    public static void main(String[] args){",
+            "        String str=\"hello\";",
+            "        int v=0,c=0;",
+            "        for(char ch:str.toLowerCase().toCharArray()){",
+            "            if(\"aeiou\".indexOf(ch)!=-1) v++;",
+            "            else if(Character.isLetter(ch)) c++;",
+            "        }",
+            "        System.out.println(\"Vowels=\"+v+\" Consonants=\"+c);",
+            "    }",
+            "}"
+          ]
+        },
+
+        {
+          "title": "21. Sort Array",
+          "content": [
+            "import java.util.*;",
+            "public class SortArray {",
+            "    public static void main(String[] args){",
+            "        int[] arr={4,2,1,3};",
+            "        Arrays.sort(arr);",
+            "        System.out.println(Arrays.toString(arr));",
+            "    }",
+            "}"
+          ]
+        },
+
+        {
+          "title": "22. Second Largest",
+          "content": [
+            "import java.util.*;",
+            "public class SecondLargest {",
+            "    public static void main(String[] args){",
+            "        int[] arr={4,2,1,3};",
+            "        Arrays.sort(arr);",
+            "        System.out.println(arr[arr.length-2]);",
+            "    }",
+            "}"
+          ]
+        },
+
+        {
+          "title": "23. Reverse Array",
+          "content": [
+            "public class ReverseArray {",
+            "    public static void main(String[] args){",
+            "        int[] arr={1,2,3,4};",
+            "        for(int i=arr.length-1;i>=0;i--)",
+            "            System.out.print(arr[i]+\" \");",
+            "    }",
+            "}"
+          ]
+        },
+
+        {
+          "title": "24. API Test - Rest Assured",
+          "content": [
+            "import static io.restassured.RestAssured.*;",
+            "import static org.hamcrest.Matchers.*;",
+            "public class APITest {",
+            "    public static void main(String[] args){",
+            "        baseURI=\"https://reqres.in\";",
+            "        given().when().get(\"/api/users/2\")",
+            "        .then().statusCode(200)",
+            "        .body(\"data.id\",equalTo(2));",
+            "    }",
+            "}"
+          ]
+        },
+
+        {
+          "title": "25. Appium Swipe Example",
+          "content": [
+            "import io.appium.java_client.*;",
+            "public class SwipeExample {",
+            "    public static void main(String[] args){",
+            "        System.out.println(\"Appium swipe requires driver setup\");",
+            "    }",
+            "}"
+          ]
+        },
+
+        {
+          "title": "26. Mouse and Keyboard Actions",
+          "content": [
+            "import org.openqa.selenium.*;",
+            "import org.openqa.selenium.chrome.*;",
+            "import org.openqa.selenium.interactions.Actions;",
+            "public class MouseKeyboard {",
+            "    public static void main(String[] args){",
+            "        WebDriver driver=new ChromeDriver();",
+            "        Actions actions=new Actions(driver);",
+            "        actions.sendKeys(Keys.ENTER).perform();",
+            "        driver.quit();",
+            "    }",
+            "}"
+          ]
+        },
+
+        {
+          "title": "27. Multiple Window Handles",
+          "content": [
+            "import org.openqa.selenium.*;",
+            "import org.openqa.selenium.chrome.*;",
+            "public class WindowHandle {",
+            "    public static void main(String[] args){",
+            "        WebDriver driver=new ChromeDriver();",
+            "        String parent=driver.getWindowHandle();",
+            "        for(String win:driver.getWindowHandles()){",
+            "            driver.switchTo().window(win);",
+            "        }",
+            "        driver.quit();",
+            "    }",
+            "}"
+          ]
+        },
+
+        {
+          "title": "28. OOPS Example",
+          "content": [
+            "class Person {",
+            "    private String name;",
+            "    public String getName(){ return name; }",
+            "    public void setName(String name){ this.name=name; }",
+            "}",
+            "public class OOPSExample {",
+            "    public static void main(String[] args){",
+            "        Person p=new Person();",
+            "        p.setName(\"John\");",
+            "        System.out.println(p.getName());",
+            "    }",
+            "}"
+          ]
         }
+
       ]
     }
   ]
