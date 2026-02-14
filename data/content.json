@@ -21,7 +21,7 @@
           "image": "/images/11.png"
         },
         {
-          "title": "Why is Java not a pure object oriented language?",
+          "title": "2. Why is Java not a pure object oriented language?",
           "content":[
             "Java supports primitive data types - byte, boolean, char, short, int, float, long, and double, and hence it is not a pure object-oriented language.",
             "Non-primitive data types are complex data types that are created from primitive types or by the programmer. Examples include arrays, which store multiple values of the same type; strings, which store a sequence of characters; classes and objects, which are user-defined types containing properties and methods; and collections like lists, sets, and maps, which can hold many items together.",
@@ -30,13 +30,18 @@
           ]
         },
         {
-          "title": "Difference between Heap and Stack Memory in java. And how java utilizes this.",
+          "title": "3. Difference between Heap and Stack Memory in java. And how java utilizes this.",
           "content": [
             "Stack memory in Java is used to store local variables and function calls. It is fast and organized in a last-in, first-out (LIFO) way.",
             "Heap memory in Java is used to store objects and non-primitive data like arrays and strings. It is bigger than stack memory and can grow dynamically.",
             "In stack memory, variables store actual values for primitives and references (memory addresses) for objects. In heap memory, the actual objects and their data are stored.",
             "Java uses stack memory for method execution and temporary variables, while it uses heap memory to store objects that can be accessed from anywhere in the program.",
-            "Stack and heap are connected through references. For example, a variable on the stack can point to an object in the heap, allowing the program to access and use that object."
+            "Stack and heap are connected through references. For example, a variable on the stack can point to an object in the heap, allowing the program to access and use that object.",
+            "Stack memory is the portion of memory that is assigned to every individual program, and its size is fixed.",
+            "Heap memory is the portion of memory that is not pre-allocated to the Java program but is available for use during runtime, mostly for storing objects.",
+            "Java utilizes this memory as follows: all variables, methods, and function calls are stored in the stack memory.",
+            "When we create any object in a Java program, the object is created in the heap memory, and the stack stores a reference (memory address) to that object.",
+            "The stack and heap are connected through these references, allowing the program to access objects stored in the heap using variables stored in the stack."
           ]
         },
         {
