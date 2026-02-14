@@ -1,39 +1,34 @@
-import ModuleCard from "../../components/ModuleCard";
+import content from "../../../data/content.json";
 import Link from "next/link";
-import content from "../../data/content.json";
 
-type PageProps = { params: { section: string } | Promise<{ section: string }> };
+type PageProps = { params: { section: string; module: string } | Promise<{ section: string; module: string }> };
 
-export default async function SectionPage({ params }: PageProps) {
+export default async function ModulePage({ params }: PageProps) {
     const resolvedParams = await params;
     const sectionData = content.sections.find((s) => s.id === resolvedParams.section);
 
     if (!sectionData) return <div>Section not found</div>;
 
+    const moduleData = sectionData.modules.find((m) => m.title === resolvedParams.module);
+    if (!moduleData) return <div>Module not found</div>;
+
     return (
-        <main className="min-h-screen bg-slate-950 text-white px-6 py-12 flex flex-col">
-            <h1 className="text-4xl font-bold text-cyan-400 mb-6">{sectionData.title}</h1>
-            <p className="text-slate-400 mb-8 max-w-2xl">{sectionData.description}</p>
+        <main className="min-h-screen bg-slate-950 text-white px-6 py-12 flex flex-col items-center">
+            <h1 className="text-3xl font-bold text-cyan-400 mb-4">{moduleData.title}</h1>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-4 mb-8">
-                {sectionData.modules.map((module) => (
-                    <ModuleCard
-                        key={module.title}
-                        sectionId={sectionData.id}
-                        moduleId={module.title}
-                        title={module.title}
-                    />
-                ))}
-            </div>
+            <img
+                src={moduleData.image}
+                alt={moduleData.title}
+                className="w-full max-w-xl rounded-lg mb-6"
+            />
 
-            {/* Back button at the bottom */}
-            <div className="mt-auto">
-                <Link href="/">
-                    <button className="bg-cyan-500 text-white px-4 py-2 rounded hover:bg-cyan-600">
-                        ← Back to Home
-                    </button>
-                </Link>
-            </div>
+            <p className="text-slate-400 max-w-2xl">{moduleData.content}</p>
+
+            <Link href={`/${sectionData.id}`}>
+                <button className="mt-8 bg-cyan-500 px-4 py-2 rounded hover:bg-cyan-600">
+                    ← Back to Section
+                </button>
+            </Link>
         </main>
     );
 }

@@ -80,8 +80,8 @@
       "modules": [
         {
           "title": "Java & Python Basics",
-          "image": "/images/Learning.jpg",
-          "content": "Learn the basics of Java and Python programming to start your automation journey."
+          "content": "Learn the basics of Java and Python programming to start your automation journey.",
+          "image": "/images/Learning.jpg"
         },
         {
           "title": "Selenium & Playwright",
