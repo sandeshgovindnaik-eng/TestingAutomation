@@ -17,16 +17,20 @@ export default async function ModulePage({ params }: ModulePageProps) {
   const moduleData = sectionData.modules.find((m) => m.title === moduleName);
   if (!moduleData) return <div>Module not found</div>;
 
+  // Ensure content is always an array for multi-line handling
+  const contentLines = Array.isArray(moduleData.content)
+    ? moduleData.content
+    : moduleData.content.split("\n");
+
   return (
-    <main className="min-h-screen bg-slate-950 text-white px-6 py-12 flex flex-col items-center">
-
+    <main className="min-h-screen bg-slate-950 text-white px-6 py-12 flex flex-col">
       {/* Module Title */}
-      <h1 className="text-3xl font-bold text-cyan-400 mb-4 text-center">{moduleData.title}</h1>
+      <h1 className="text-3xl font-bold text-cyan-400 mb-6">{moduleData.title}</h1>
 
-      {/* Module Image (if exists) */}
+      {/* Module Image (only if exists) */}
       {moduleData.image && (
         <img
-          src={moduleData.image}
+          src={moduleData.image} // e.g., "/images/sdlc_stlc.png"
           alt={moduleData.title}
           className="w-full max-w-3xl h-auto rounded-lg mb-6 object-cover shadow-lg"
         />
@@ -34,17 +38,11 @@ export default async function ModulePage({ params }: ModulePageProps) {
 
       {/* Module Content */}
       <div className="text-slate-300 max-w-3xl mb-8">
-        {Array.isArray(moduleData.content)
-          ? moduleData.content.map((line, idx) => (
-              <p key={idx} className="mb-2 text-center">
-                {line}
-              </p>
-            ))
-          : moduleData.content.split("\n").map((line, idx) => (
-              <p key={idx} className="mb-2 text-center">
-                {line}
-              </p>
-            ))}
+        {contentLines.map((line, idx) => (
+          <p key={idx} className="mb-2">
+            {line}
+          </p>
+        ))}
       </div>
 
       {/* Back Button */}
