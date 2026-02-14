@@ -22,7 +22,7 @@
         },
         {
           "title": "Why is Java not a pure object oriented language?",
-          "content": "DevOps is important because it integrates development and operations, enabling faster and more reliable delivery of software."
+          "content":["Java supports primitive data types - byte, boolean, char, short, int, float, long, and double and hence it is not a pure object oriented language."]
         },
         {
           "title": "Why DevOps Matters1",
