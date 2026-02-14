@@ -1,8 +1,8 @@
 {
   "sections": [
     {
-      "id": "introduction-sandesh",
-      "title": "Introduction",
+      "id": "introduction",
+      "title": "Introduction-sandesh",
       "description": "Foundations of Automation Testing and DevOps",
       "image": "/images/introduction.jpg",
       "modules": [
