@@ -1,5 +1,6 @@
+import ModuleCard from "../../components/ModuleCard";
 import Link from "next/link";
-import content from "../../../../data/content.json";
+import content from "../../data/content.json";
 
 type PageProps = { params: { section: string; module: string } | Promise<{ section: string; module: string }> };
 
