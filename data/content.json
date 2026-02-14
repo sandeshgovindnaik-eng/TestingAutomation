@@ -1,9 +1,9 @@
 {
   "sections": [
     {
-      "id": "introduction",
-      "title": "Introduction-sandesh",
-      "description": "Foundations of Automation Testing and DevOps",
+      "id": "Java",
+      "title": "Java",
+      "description": "Java Interview Questions for Automation testing",
       "image": "/images/introduction.jpg",
       "modules": [
         {
