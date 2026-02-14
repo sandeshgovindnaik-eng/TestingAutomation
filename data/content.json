@@ -41,12 +41,17 @@
             "Heap memory is the portion of memory that is not pre-allocated to the Java program but is available for use during runtime, mostly for storing objects.",
             "Java utilizes this memory as follows: all variables, methods, and function calls are stored in the stack memory.",
             "When we create any object in a Java program, the object is created in the heap memory, and the stack stores a reference (memory address) to that object.",
-            "The stack and heap are connected through these references, allowing the program to access objects stored in the heap using variables stored in the stack."
-          ]
+            "The stack and heap are connected through these references, allowing the program to access objects stored in the heap using variables stored in the stack.",
+            "Main and PrintArray is the method that will be available in the stack area and as well as the variables declared that will also be in the stack area.",
+            "And the Object (Integer Array of size 10) we have created, will be available in the Heap area because that space will be allocated to the program during runtime." ]
         },
         {
-          "title": "Why DevOps Matters2",
-          "content": "DevOps is important because it integrates development and operations, enabling faster and more reliable delivery of software."
+          "title": "Can java be said to be the complete object-oriented programming language?",
+          "content":[
+            "It is not wrong to claim that Java is a complete object-oriented programming language because most things in Java are defined under classes and can be accessed by creating objects.",
+            "However, Java is not considered a completely object-oriented programming language because it supports primitive data types like int, float, char, boolean, and double.",
+            "Therefore, the answer to the question 'Is Java a completely object-oriented programming language?' is: Java is not a pure object-oriented language because primitive data types can be used directly, and they do not belong to classes like Integer, Float, or Boolean."
+          ]
         },
         {
           "title": "SDLC & STLC Overview",
