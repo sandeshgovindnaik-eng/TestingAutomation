@@ -22,7 +22,12 @@
         },
         {
           "title": "Why is Java not a pure object oriented language?",
-          "content":["Java supports primitive data types - byte, boolean, char, short, int, float, long, and double and hence it is not a pure object oriented language."]
+          "content":[
+            "Java supports primitive data types - byte, boolean, char, short, int, float, long, and double, and hence it is not a pure object-oriented language.",
+            "Non-primitive data types are complex data types that are created from primitive types or by the programmer. Examples include arrays, which store multiple values of the same type; strings, which store a sequence of characters; classes and objects, which are user-defined types containing properties and methods; and collections like lists, sets, and maps, which can hold many items together.",
+            "Non-primitive data is stored in heap memory, which is used for bigger and dynamic data, while the variable that points to this data is stored in stack memory. For example, when a string is created, the actual characters of the string are stored in the heap, and the stack stores a reference, which is the memory address pointing to the string object in the heap. Whenever the program accesses the string, it uses the reference on the stack to locate and manipulate the string object in the heap.",
+            "The stack and heap are connected through these references, meaning the stack keeps track of where the objects in the heap are located. This allows the program to efficiently manage memory: the stack handles method calls and local variables, while the heap stores complex objects that can be shared or dynamically resized during runtime."
+          ]
         },
         {
           "title": "Why DevOps Matters1",
