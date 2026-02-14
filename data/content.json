@@ -7,9 +7,9 @@
       "image": "/images/introduction.jpg",
       "modules": [
         {
-          "title": "What is Automation Testing?",
-          "content": "Automation testing is the process of using tools and scripts to perform testing automatically, reducing manual effort.",
-          "image": "/images/introduction.jpg"
+          "title": "1. Why is Java a platform independent language?",
+          "content": "Java language was developed so that it does not depend on any hardware or software because the compiler compiles the code and then converts it to platform-independent byte code which can be run on multiple systems.",
+          "image": "/images/11.png"
         },
         {
           "title": "Why DevOps Matters",
