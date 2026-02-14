@@ -1,4 +1,4 @@
-import content from "../../../data/content.json";
+import content from "../data/content.json";
 import Link from "next/link";
 
 type PageProps = { params: { section: string; module: string } | Promise<{ section: string; module: string }> };
