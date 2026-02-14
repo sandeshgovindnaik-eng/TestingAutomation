@@ -27,3 +27,4 @@ export default function ModuleCard({ title, content, image }: ModuleCardProps) {
     </div>
   );
 }
+
