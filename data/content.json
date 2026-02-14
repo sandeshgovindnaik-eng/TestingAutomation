@@ -8,7 +8,10 @@
       "modules": [
         {
           "title": "1. Why is Java a platform independent language?",
-          "content": "Java language was developed so that it does not depend on any hardware or software because the compiler compiles the code and then converts it to platform-independent byte code which can be run on multiple systems.",
+          "content": [
+            "Java language was developed so that it does not depend on any hardware or software because the compiler compiles the code and then converts it to platform-independent byte code which can be run on multiple systems.",
+            "Java is also strongly typed and object-oriented, making it robust and portable."
+          ],
           "image": "/images/11.png"
         },
         {

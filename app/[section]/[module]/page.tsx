@@ -23,17 +23,29 @@ export default async function ModulePage({ params }: ModulePageProps) {
       {/* Module Title */}
       <h1 className="text-3xl font-bold text-cyan-400 mb-4 text-center">{moduleData.title}</h1>
 
-      {/* Module Image (only here, if exists) */}
+      {/* Module Image (if exists) */}
       {moduleData.image && (
         <img
-          src={moduleData.image} // e.g., "/images/sdlc_stlc.png"
+          src={moduleData.image}
           alt={moduleData.title}
           className="w-full max-w-3xl h-auto rounded-lg mb-6 object-cover shadow-lg"
         />
       )}
 
       {/* Module Content */}
-      <p className="text-slate-300 max-w-3xl text-center mb-8">{moduleData.content}</p>
+      <div className="text-slate-300 max-w-3xl mb-8">
+        {Array.isArray(moduleData.content)
+          ? moduleData.content.map((line, idx) => (
+              <p key={idx} className="mb-2 text-center">
+                {line}
+              </p>
+            ))
+          : moduleData.content.split("\n").map((line, idx) => (
+              <p key={idx} className="mb-2 text-center">
+                {line}
+              </p>
+            ))}
+      </div>
 
       {/* Back Button */}
       <div className="mt-auto">
