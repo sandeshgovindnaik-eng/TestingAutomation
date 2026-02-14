@@ -8,9 +8,15 @@
       "modules": [
         {
           "title": "1. Why is Java a platform independent language?",
-          "content": [
-            "Java language was developed so that it does not depend on any hardware or software because the compiler compiles the code and then converts it to platform-independent byte code which can be run on multiple systems.",
-            "Java is also strongly typed and object-oriented, making it robust and portable."
+          "content": ["Java is platform independent because Java programs are compiled into bytecode, which can run on any computer that has a Java Virtual Machine (JVM).",
+
+            "You write Java code once.",
+
+            "The compiler converts it to bytecode.",
+
+            "The JVM on any operating system (Windows, Mac, Linux) can run that bytecode.",
+
+            "So the same program runs anywhere without changing the code."
           ],
           "image": "/images/11.png"
         },
